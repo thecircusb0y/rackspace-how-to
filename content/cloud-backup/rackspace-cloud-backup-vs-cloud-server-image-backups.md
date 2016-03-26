@@ -11,23 +11,23 @@ product: Cloud Backup
 product_url: cloud-backup
 ---
 
-Some users are used to taking snapshots of their Cloud Server [product
-page](http://www.rackspace.com/cloud/servers) as a backup. If you have
-a solution where you want to save the server's state or configuration,
-or want to keep gold copies of your system, then you can create an image
-backup of the server. Because it is an image of the whole server, there
-is really no control over the individual files. You cannot, say, recover
-a single file from that image, or update a single file. But, on the
-other hand, having a single file to manage (the image) allows you to
-easily recreate a new server with that identical configuration and
-state.
+Some users are used to taking snapshots of their [Cloud Servers](http://www.rackspace.com/cloud/servers) 
+as a backup. If you require a solution that saves the server's state or configuration,
+or you want to keep gold copies of your system, then you can create an image
+backup of the server. The backup saves the whole server in 
+a single file that you can use to 
+easily recreate a new server with an identical configuration and
+state. However, an image backup does not 
+give you any control over the individual files on the server. For example, you cannot 
+use the image to recover or update a single file. 
+
 **Note:** You can learn more about scheduling images from the [Scheduled
 Images
 FAQ](/how-to/scheduled-images-faq).
 
 Rackspace Cloud Backup, on the other hand, is a **FILE-BASED backup**.
-This means that you can specify what folders or files to backup or
-restore. As usual, you can choose to backup or restore the whole system
+that allows you to specify what folders or files to backup or
+restore. You can still use Cloud Backup to backup or restore the whole system
 with all its folders, but the distinction with image backups is that the
 granularity of Rackspace Cloud Backup is at the file level, as opposed
 to it being at the whole server image level.
@@ -61,7 +61,7 @@ Servers. Below is a summary of both:
 
 **NOTE:** With General Purpose and I/O-optimized Cloud Servers, only the
 system disk is captured when using an Image Backup. If you require
-backups of your data disk or disks, use Cloud Backup so you configure
+backups of your data disk or disks, use Cloud Backup so you can configure
 your backup to include the specific drives and directories you want to
 retain. To determine which product best suits your backup needs, visit
 the links below:
