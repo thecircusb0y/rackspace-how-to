@@ -163,16 +163,17 @@ documentation](https://developer.rackspace.com/docs/cloud-monitoring/v1/develope
 The following criteria returns a Warning status when CPU usage is above
 90% and a Critical status when CPU usage is above 95%.
 
-    if (metric['usage_average'] > 95)
-           return new AlarmStatus(CRITICAL, 'CPU usage is #usage_average%, above your
-        critical threshold of 95%');
 
-        if (metric['usage_average'] > 90)
-           return new AlarmStatus(WARNING, 'CPU usage is #usage_average%, above your description of the example code
-        warning threshold of 90%');
+    if (metric['usage_average'] > 95) {
+       return new AlarmStatus(CRITICAL, 'CPU usage is #usage_average%, above your
+    critical threshold of 95%'); }
 
-        return new AlarmStatus(OK, 'CPU usage is #usage_average%, below your warning
-           threshold of 90%');
+    if (metric['usage_average'] > 90){
+       return new AlarmStatus(WARNING, 'CPU usage is #usage_average%, above your description of the example code
+    warning threshold of 90%');}
+
+    return new AlarmStatus(OK, 'CPU usage is #usage_average%, below your warning
+       threshold of 90%');
 
 ### File system alarms
 
